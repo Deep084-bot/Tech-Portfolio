@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deep Mehta | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+
+    <div id="particles-js" class="particles-bg"></div>
+
+    <nav class="nav light-theme">
+        <div class="logo">Portfolio Website</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#macbook-section">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./assets/resume.pdf" target="Resume">Resume</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+    </nav>
+
+    <section id="about" class="section fade">
+        <div class="about-card">
+            <div class="about-photo">
+                <img src="./assets/Deep.jpeg" alt="Deep Mehta" />
+            </div>
+            <div class="about-text light">
+                <h2 class="about-title">
+                    <span class="about-accent"></span>
+                    Hi, I'm <span class="about-name">Deep Mehta</span>
+                </h2>
+                <p class="about-desc">
+                    An aspiring <b>software developer</b> passionate about building impactful digital experiences.<br><br>
+                    <span class="about-highlight">Skills:</span> C, C++, Java, HTML, CSS, JavaScript, Node.js(basic), MongoDB(basic).<br>
+                    <span class="about-highlight">Tools:</span> Git, GitHub, VS Code, Linux, MacOS.<br><br>
+                    I love <span class="about-strong">solving problems</span>, learning new technologies, and collaborating on innovative projects.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="macbook-section" class="section no-fade">
+        <div class="macbook-container">
+            <div class="macbook-frame">
+                <div id="macbook-screen" class="macbook-screen">
+                    <div id="mac-app-launcher" class="mac-app-launcher mac-app-corner">
+                        <div class="app-icon">
+                            <span>🗂️</span>
+                            <div class="app-label">My Works</div>
+                        </div>
+                    </div>
+                    <div id="mac-tabs-container" style="display:none;">
+                        <nav class="tabs">
+                            <button class="tab active" data-tab="skills">Skills</button>
+                            <button class="tab" data-tab="projects">Projects</button>
+                            <button class="tab" data-tab="education-tab">Education</button>
+                            <button class="tab" data-tab="contact-tab">Skills and Co-Curriculum</button>
+                        </nav>
+
+                        <div class="tab-content active" id="skills">
+                            <ul class="skills-list">
+                                <li><strong>Programming:</strong> C, C++, Java</li>
+                                <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+                                <li><strong>Frameworks:</strong> Node.js, Express.js</li>
+                                <li><strong>Database:</strong> MongoDB</li>
+                                <li><strong>Tools:</strong> Git, GitHub, VS Code, Linux (Basic), MacOS</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-content" id="projects">
+                            <div class="project-cards">
+                                <div class="project-card">
+                                    <h3>Portfolio Website</h3>
+                                    <img src="./assets/i1.png" alt="Portfolio Website" style="width: 100%; height: auto;" />
+                                    <p>Responsive, animated portfolio built with HTML, CSS, JS.</p>
+                                    <a href="https://deep084-bot.github.io/Personal-Portfolio/" target="Portfolio">View
+                                        Project</a>
+                                </div>
+                                <div class="project-card">
+                                    <h3>Image-to-PDF</h3>
+                                    <img src="./assets/Image-to-pdf.png" alt="Image-to-pdf"
+                                    style="width: 100%; height: auto;" />
+                                    <p>A web application which helps to generate pdfs from any format of image. Built using HTML, CSS and JS.</p>
+                                    <a href="https://deep084-bot.github.io/Image-to-PDF/" target="Image-to-Pdf">View Project</a>
+                                </div>
+                                <div class="project-card">
+                                    <h3>Adventure Explorer</h3>
+                                    <img src="./assets/i3.png" alt="Adventure Explorer"
+                                        style="width: 100%; height: auto;" />
+                                    <p>A web application that helps users discover hidden gems of India and plan their next
+                                        adventure. It's not a full stack one but still has a complete frontend.</p>
+                                    <a href="https://deep084-bot.github.io/Adventure-explorer/" target="Adventure-explorer">View Project</a>
+                                </div>
+                                <div class="project-card">
+                                    <h3>Social Media Feed</h3>
+                                    <img src="./assets/i4.png" alt="Social Media Feed" style="width: 100%; height: auto;" />
+                                    <p>Developed in C Language, this project simulates a social media feed with basic
+                                        functionalities.</p>
+                                    <a href="https://github.com/Deep084-bot/C-Lang-Projects/blob/main/SnapFeed-MiniSocialMedia.c" target="C Lang">View Project</a>
+                                </div>
+                                <div class="project-card">
+                                    <h3>Hospital Management System and many more</h3>
+                                    <p>A comprehensive system in Java for managing hospital operations, patient records, and
+                                        appointments. Also a whole pile of many other terminal based projects in Java.</p>
+                                    <a href="https://github.com/Deep084-bot/Java-Projects" target="GitHub Link">View Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="contact-tab">
+                            <ul>
+                                <li>Participated in HackIIITV Hackathon – 2025</li>
+                                <li>Member of Encore – Music Club, IIIT Vadodara</li>
+                                <li>Solved 250+ coding problems on LeetCode</li>
+                                <li>Achieved a 1400+ rating on CodeChef</li>
+                                <li>Passionate and sophisticated music enthusiast</li>
+                                <li>Trained Classical Indian singer and instrumentalist</li>
+                                <li>Three-time winner at district-level Kala Mahakumbh (Solo Instrumental category)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="education-tab">
+                            <ul>
+                                <li>B.Tech in Computer Science – IIIT Vadodara (2025 - Present) Score: 9.24 CPI</li>
+                                <li>Higher Secondary – Amicus International School (2024) Score: 87%</li>
+                                <li>Secondary School – Sanskar Vidhya Bhavan (2022) Score: 96.4%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <div class="macbook-keyboard-base">
+        <div class="macbook-keyboard">
+            <div class="keyboard-row">
+                <div class="key key-wide"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key key-wide"></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key key-medium"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key key-medium"></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key key-medium"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key"></div>
+                <div class="key key-medium"></div>
+            </div>
+            <div class="keyboard-row">
+                <div class="key key-space"></div>
+            </div>
+            <div class="trackpad"></div>
+        </div>
+    </div>
+    <div class="keyboard-bottom-line"></div>
+    <section id="contact" class="section fade light">
+        <h2 class="light">Contact Me</h2>
+        <p class="light">Email: <a href="mailto:dpmehta1211@gmail.com"><button onclick="copyEmail()">📋</button></a> <span
+                id="email">dpmehta1211@gmail.com</span></p>
+        <p class="light">LinkedIn: <a href="https://www.linkedin.com/in/deep-mehta-a37479316/"
+                target="_blank">linkedin.com/in/deep-mehta-a37479316</a></p>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

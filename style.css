@@ -1,0 +1,829 @@
+:root {
+  --bg: #0e0e23;
+  --accent: #8f00ff;
+  --accent-light: #9c75ff;
+  --text: #ffffff;
+  --text-light: #cccccc;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.light-theme {
+  --bg: #f5f5f5;
+  --text: #ffffff;
+  --accent: #6200ea;
+  --accent-light: #bb86fc;
+}
+
+.light {
+  --bg: #f5f5f5;
+  --text: #222;
+  --accent: #6200ea;
+  --accent-light: #bb86fc;
+}
+
+#particles-js.particles-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(14, 14, 35, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text);
+  margin-left: 18px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 100px 20px 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(30, 32, 48, 0.92);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #00c2ff33, 0 2px 8px #8f00ff22;
+  padding: 40px 48px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  animation: about-fade-in 1.2s cubic-bezier(.4,2,.6,1) both;
+}
+
+.about-photo img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 24px #00c2ff55, 0 0 8px #8f00ff33;
+  border: 4px solid #23233c;
+}
+
+.about-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #f3f6fa;
+  max-width: 500px;
+}
+
+.about-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-accent {
+  display: inline-block;
+  width: 8px;
+  height: 36px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #00c2ff 60%, #8f00ff 100%);
+  margin-right: 10px;
+}
+
+.about-name {
+  color: #00c2ff;
+  font-family: 'Fira Mono', monospace;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.about-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-top: 8px;
+  color: #e0e6f5;
+}
+
+.about-highlight {
+  color: #8f00ff;
+  font-weight: 600;
+  font-family: 'Fira Mono', monospace;
+}
+
+.about-strong {
+  color: #00c2ff;
+  font-weight: 600;
+  font-family: 'Fira Mono', monospace;
+}
+
+.light-theme p.light {
+  color: #111 !important;
+}
+
+p.light {
+  color: var(--text-light) !important;
+}
+
+.macbook-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.macbook-frame {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #222244, #12122f);
+  border-radius: 35px 35px 10px 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 2;
+}
+
+.macbook-frame::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent-light), var(--accent));
+  border-radius: 3px;
+  box-shadow: 0 0 10px var(--accent-light);
+}
+
+.macbook-screen {
+  background: #12122f;
+  border-radius: 20px;
+  margin: 40px;
+  padding: 20px;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px; 
+  box-sizing: border-box;
+  overflow-y: auto; 
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid var(--accent-light);
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: var(--accent-light);
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px 6px 0 0;
+  transition: background 0.3s;
+}
+
+.tab.active, .tab:hover {
+  background-color: var(--accent-light);
+  color: var(--bg);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.skills-list {
+  list-style-type: none;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #222244;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(143, 0, 255, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  flex: 1 1 45%; 
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  box-sizing: border-box;
+}
+
+#theme-toggle {
+  margin-left: 18px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px var(--accent);
+}
+
+.project-card a {
+  color: var(--accent-light);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contact-section {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.contact-section a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+button[onclick="copyEmail()"] {
+  background: var(--accent-light);
+  color: var(--bg);
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-fade {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .macbook-screen {
+    margin: 20px;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    padding: 12px 10px;
+  }
+  #theme-toggle {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.6rem;
+  }
+}
+.macbook-screen {
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px; 
+  box-sizing: border-box;
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  font-size: 1.2rem; 
+}
+
+.tab-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  font-size: 1.1rem; 
+  line-height: 1.5;
+  color: white;
+}
+
+.project-card {
+  flex: 1 1 45%; 
+  font-size: 1.1rem;
+}
+
+.skills-list {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.macbook-frame {
+  max-width: 100%;
+  height: 500px; 
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow:
+    inset 0 0 10px #00c2ff,
+    0 0 25px #00c2ff88;
+  background: #1c1c2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.macbook-screen {
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+}
+#about {
+  padding-bottom: 0px; 
+  margin-bottom: 0px;  
+}
+
+#macbook-section {
+  margin-bottom: 10px; 
+  padding-bottom: 0;
+}
+
+#contact {
+  padding-top: 20px;  
+  padding-bottom: 30px; 
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  flex-direction: column;
+  text-align: center;       
+}
+
+#contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+#contact p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+.highlights-section {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    color: #333;
+}
+
+.highlights-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.highlight-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card h3 {
+    font-size: 2.5rem;
+    color: #8f00ff;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+style1.css */
+.macbook-keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -18px;
+  margin-bottom: 40px;
+  user-select: none;
+  transform: scale(1.4);
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.key {
+  width: 48px;
+  height: 28px;
+  background: #22223a;
+  border-radius: 6px;
+  margin: 0 5px;
+  box-shadow:
+    0 0 8px 2px #00c2ff88,   
+    0 0 6px 1px #8f00ff55,   
+    0 2px 8px #0004,
+    0 1px 0 #444 inset;
+  border: 1.5px solid #33334a;
+  transition: 
+    background 0.15s,
+    transform 0.08s,
+    box-shadow 0.15s;
+  cursor: pointer;
+  position: relative;
+}
+
+.key-wide {
+  width: 72px;
+}
+
+.key-medium {
+  width: 60px;
+}
+
+.key-space {
+  width: 320px;
+  height: 32px;
+  border-radius: 12px;
+  background: #23233c;
+  margin: 0 5px;
+}
+
+.key:hover {
+  background: #39395a;
+  box-shadow: 0 4px 16px #0006, 0 1px 0 #666 inset;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.key:active {
+  background: #11112a;
+  box-shadow: 0 1px 2px #0008 inset;
+  transform: translateY(2px) scale(0.98);
+}
+
+.key.pressed {
+  background: #11112a;
+  box-shadow: 0 1px 2px #0008 inset;
+  transform: translateY(2px) scale(0.98);
+}
+
+.macbook-keyboard-base {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  perspective: 1200px;
+  z-index: 1;
+}
+
+.macbook-keyboard {
+  background: linear-gradient(180deg, #23233c 80%, #181828 100%);
+  border: 3px solid #22223a;
+  border-radius: 0 0 22px 22px;
+  box-shadow:
+    0 0 25px #00c2ff88,      
+    0 12px 32px #0006,        
+    0 2px 8px #8f00ff22;      
+  padding: 32px 32px 24px 32px;
+  position: relative;
+  min-width: 0;
+  width: 90%;
+  max-width: 900px;
+  transform: perspective(900px) rotateX(18deg);
+}
+
+.macbook-keyboard::before,
+.macbook-keyboard::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, #444 10%, #888 50%, #444 90%);
+  opacity: 0.25;
+  border-radius: 1px;
+  pointer-events: none;
+}
+.macbook-keyboard::before {
+  top: 54px;
+}
+.macbook-keyboard::after {
+  top: 108px;
+}
+
+.macbook-keyboard .keyboard-bottom-line {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 12px;
+  height: 3px;
+  background: linear-gradient(90deg, #fff2 0%, #8f00ff55 50%, #fff2 100%);
+  border-radius: 2px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.trackpad {
+  width: 200px;
+  height: 60px;
+  margin: 24px auto 0 auto;
+  background: #23233c;
+  border-radius: 12px;
+  box-shadow:
+    0 0 12px 2px #00c2ff44,   
+    0 2px 8px #0004;
+  border: 2px solid #33334a;
+  transition: box-shadow 0.2s;
+  display: block;
+}
+
+.trackpad:hover {
+  box-shadow:
+    0 0 24px 4px #00c2ff88,
+    0 4px 16px #8f00ff44;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Fira+Mono&display=swap');
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: rgba(30, 32, 48, 0.92);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #00c2ff33, 0 2px 8px #8f00ff22;
+  padding: 40px 48px;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  animation: about-fade-in 1.2s cubic-bezier(.4,2,.6,1) both;
+}
+
+@keyframes about-fade-in {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: none;}
+}
+
+.about-photo img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 24px #00c2ff55, 0 0 8px #8f00ff33;
+  border: 4px solid #23233c;
+}
+
+.about-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #f3f6fa;
+  max-width: 500px;
+}
+
+.about-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-accent {
+  display: inline-block;
+  width: 8px;
+  height: 36px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #00c2ff 60%, #8f00ff 100%);
+  margin-right: 10px;
+}
+
+.about-name {
+  color: #00c2ff;
+  font-family: 'Fira Mono', monospace;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.about-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-top: 8px;
+  color: #e0e6f5;
+}
+
+.about-highlight {
+  color: #8f00ff;
+  font-weight: 600;
+  font-family: 'Fira Mono', monospace;
+}
+
+.about-strong {
+  color: #00c2ff;
+  font-weight: 600;
+  font-family: 'Fira Mono', monospace;
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  .about-card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 10px;
+  }
+  .about-photo img {
+    width: 120px;
+    height: 120px;
+  }
+  .about-title {
+    font-size: 1.3rem;
+  }
+}
+.mac-app-launcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 350px;
+  animation: fadeIn 1s;
+}
+
+.app-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(30,32,48,0.98);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #00c2ff44, 0 2px 8px #8f00ff22;
+  padding: 18px 22px 10px 22px;
+  cursor: pointer;
+  border: 2px solid #8f00ff44;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-bottom: 4px solid #00c2ff;
+}
+
+.app-icon span {
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 0 8px #00c2ff88);
+}
+
+.app-label {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  color: #00c2ff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.app-icon:hover {
+  transform: scale(1.09);
+  box-shadow: 0 8px 32px #00c2ff88, 0 4px 16px #8f00ff44;
+}
+
+.mac-app-launcher.mac-app-corner {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+  height: auto;
+  width: auto;
+  background: none;
+  box-shadow: none;
+  z-index: 10;
+  animation: fadeIn 1s;
+  pointer-events: auto;
+}
